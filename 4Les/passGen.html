@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Личный сайт</title>
+    <link rel="stylesheet" href="style.css">
+    <script> 
+        
+        var letters = ["q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "f", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+
+        function readInt(){
+            return +document.getElementById("userAnswer").value;
+        }
+
+        function write(text){
+            document.getElementById("passw").innerHTML = text
+        }
+
+        function getRandomNumber(max){
+            return  Math.round(Math.random() * max);
+        }
+
+        function generateText(letters, length){
+            var text = "";
+            for(var i = 0; i < length; i++){
+                var n = getRandomNumber(letters.length - 1);
+                text = text + letters[n];
+            }
+            return text;
+        }
+
+        function generate(){
+            var length = readInt();
+            var passw = generateText(letters, length);
+            write(passw);
+        }
+    </script>
+</head>
+<body>
+<div class="content">
+    <div class="header">
+        <a href="index.html">Главная</a>
+        <a href="riddles.html">Загадки</a>
+        <a href="guessing.html">Угадайка</a>
+        <a href="guessing2.html">Угадайка на 2-х</a>
+        <a href="passGen.html">Генератор паролей</a>
+    </div>
+
+    <div class="contentWrap">
+        <div class="content">
+            <div class="center">
+            
+                <h1>Генератор паролей</h1>
+
+                <div class="box">
+
+                    <p>Укажите длину пароля</p>
+                    <input type="text" id="userAnswer">
+                    <h3 id="passw"></h3>
+                    <a href="#" onclick="generate();">Генерировать</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="footer">
+    Copyright &copy; Vladislav
+</div>
+
+</body>
+</html>

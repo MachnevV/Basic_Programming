@@ -1,0 +1,43 @@
+<script type="text/javascript"> // Подсчет суммы от 1 до N
+    
+    var n = +prompt("Пожалуйста введите положительное число");
+    
+    // if(isNaN(n)){
+    //     document.write("Нужно было ввести число!")
+    // } else if(n < 0){
+    //     document.write("Нужно было ввести положительное число!")
+    // } else {    
+    //     var sum = 0;
+    //     for(var i = 0; i <= n; i++){
+    //         sum += i; // sum = sum + i;
+    //         //document.write(i + " " + sum + "<br>");
+    //     }
+    // document.write(sum);
+    // }
+
+    //более коротко можно записать:
+    /*if(isNaN(n) || n < 0){
+        document.write("Нужно было ввести положительное число!")
+    } else {    
+        var sum = 0;
+        for(var i = 0; i <= n; i++){
+            sum += i; // sum = sum + i;
+            //document.write(i + " " + sum + "<br>");
+        }
+    document.write(sum);
+    }*/
+
+
+    // чтобы дать возможность исправиться, закцикливаем
+    while(isNaN(n) || n < 0){
+        n = +prompt("Пожалуйста введите положительное число");
+    }
+        
+    var sum = 0;
+    for(var i = 0; i <= n; i++){
+        sum += i; // sum = sum + i;
+        //document.write(i + " " + sum + "<br>");
+    }
+    document.write(sum);
+    
+</script>

@@ -1,0 +1,33 @@
+<script type="text/javascript"> // Игра "отгадай число" для 2-х игроков с бесконеч кол-ом попыток
+    
+    var answer = parseInt(Math.random() * 100)
+    var playerNumber = 1;
+
+    while(true){ // false - лож
+        var userAnswer = prompt("Угадайте число от 0 до 100.\nХодит игрок " +
+        playerNumber + ".\nДля выхода нажмите q");
+
+        if(userAnswer == "q")
+        break;
+
+        userAnswer = parseInt(userAnswer);
+
+        if(userAnswer == answer){
+            alert("Поздравляю, Победил игрок " + playerNumber);
+            break;
+        } else if(userAnswer > answer){
+            alert("Вы ввели слишком большое число");
+        } else if(userAnswer < answer){
+            alert("Вы ввели слишком маленькое число");
+        }
+
+        if(playerNumber == 1)
+            playerNumber = 2;
+        else
+            playerNumber = 1;
+
+    }
+
+    alert("Правильный ответ: " + answer);
+
+</script>

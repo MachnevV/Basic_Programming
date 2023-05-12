@@ -1,0 +1,35 @@
+<script>
+    
+    function getRandomNumber(max){
+        return  Math.round(Math.random() * max);
+    }
+
+    function generateText(Letters, length){
+        var text = "";
+        for(var i = 0; i < length; i++){
+            var n = getRandomNumber(Letters.length - 1);
+            text = text + Letters[n];
+
+        }
+        return text;
+    }
+
+    alert("Вас приветствует программа по обучению слепой печати");
+
+    while(true){
+        alert("Положите 4 пальца левой руки - мезинец, безымянный, средний, указательный " +
+            "- на клавиши ф, ы, в, а. Запомните, что буква А находится под вашим указательным" +
+            "пальцем, а Ф - под мизинцем.\nТеперь неспеша набирайте текст. Постарайтесь не " +
+            "смотреть на клавиатуру.");
+
+        var text = generateText(["ф", "а"], 10);  //сгенерирует текст вида: фааафаафаф
+        var userText = prompt(text);
+        if(userText == text){
+            alert("Все верно!");
+            break;
+        } else{
+            alert("Вы ошиблись. Попробуйте еще раз");
+        }
+    }
+
+</script>

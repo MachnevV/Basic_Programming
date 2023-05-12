@@ -1,0 +1,29 @@
+<script> // Банковская программа
+// - Пользователь вводит сумму вклада и процент, который будет начисляться ежегодно. Отобразить размер вклада поочередно на ближайшие 5 лет.
+
+    // var deposit = +prompt("Укажите какую сумму вы хотите внести на вклад");
+    // var percent = +prompt("Укажите процент для вклада");
+    // var year = 1;
+    // var profit = deposit * (percent / 100);
+
+    // while(year <= 5){
+    //     document.write("Год: " + year + " Ваш вклад: " + deposit.toFixed(2) + " Доход со вклада: " + profit.toFixed(2)  + "<br>");
+    //     year++;
+    //     deposit = deposit + profit;
+    //     profit = deposit * (percent / 100);
+    // }
+
+    // второй вариант решения 
+    var deposit = +prompt("Укажите какую сумму вы хотите внести на вклад");
+    var percent = +prompt("Укажите процент для вклада");
+    percent = percent / 100;
+
+    var result = "Изменение размера вклада по годам:\n";
+
+    for(var i = 1; i <= 5; i++){
+        deposit = deposit + (deposit * percent);
+        result += i + " год:" + deposit.toFixed(2) + " рублей\n";
+    }
+    alert(result);
+
+</script>

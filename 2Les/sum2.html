@@ -1,0 +1,13 @@
+<script type="text/javascript"> // Подсчет суммы от 1 до N
+    
+    do{
+        var n = +prompt("Пожалуйста введите положительное число");
+    } while(isNaN(n) || n < 0)
+        
+    var sum = 0;
+    for(var i = 0; i <= n; i++){
+        sum += i; // sum = sum + i;
+    }
+    document.write(sum);
+    
+</script>

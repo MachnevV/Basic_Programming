@@ -1,0 +1,18 @@
+<script type="text/javascript"> // Подсчет суммы арифметической прогрессии
+    
+    var start = 10;     // Начало отсчета(включительно)
+    var n = 20;         // до какого числа считаем
+    var step = 2;       // Шаг
+    var sum = 0;        // здесь будем хранить сумму всех чисел от start до n
+    var next = start;   // Следующее число
+    
+    while(next <= n){
+        sum = sum + next;
+        next = next + step;
+    }
+
+    document.write("Начало отсчета:" + start + "<br>");
+    document.write("Число, до которого считаем:" + n + "<br>");
+    document.write("Шаг:" + step + "<br>");
+    document.write("Итоговая сумма:" + sum + "<br>");
+</script>

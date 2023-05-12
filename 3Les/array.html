@@ -1,0 +1,32 @@
+<script>
+
+    var numbers = [42, 56, 96, 14, 28];
+
+    alert("Запомните числа и их порядок: " + numbers);
+
+    var userAnswers = +prompt("Какое было первое число?");
+    alert(numbers[0]); // 42
+    if(userAnswers == numbers[0]){
+        alert("Все верно!");
+    } else {
+        alert("Не правильно. Правильный ответ:" + numbers[0]);
+    }
+
+    userAnswers = +prompt("А последнее?");
+    // alert(numbers[4]); // Так не нужно делать!
+    alert(numbers.length); // 5
+    alert(numbers[numbers.length - 1]); // то же что и numbers[4]
+    if(userAnswers == numbers[numbers.length - 1]){
+        alert("Все верно!");
+    } else {
+        alert("Не правильно. Правильный ответ:" + numbers[numbers.length - 1]);
+    }
+
+    var n = parseInt(Math.random() * numbers.length);
+    userAnswers = +prompt("А как насчет числа под номером: " + (n + 1) + "?");
+    if(userAnswers == numbers[n]){
+        alert("Все верно!");
+    } else {
+        alert("Не правильно. Правильный ответ:" + numbers[n]);
+    }
+</script>
